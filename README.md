@@ -28,7 +28,7 @@ First, the variable 'board' was declared. Inside the variable is the pd.read_exc
 <br><br>
 ![alt text][RefDF]
 
-[RefDF]:
+[RefDF]: Results/RefDF.png
 
 ### ECE Board Exam Problem
 Using data wrangling and data visualization technique with storytelling, analyze the data and present different (i) data frames; and (ii) visuals using the dataset given.
@@ -49,7 +49,7 @@ Instru
 <br><br>
 ![alt text][No1A]
 
-[No1A]: 
+[No1A]: Results/No1A.png
 
 **Part 1B**
 ```
@@ -75,7 +75,7 @@ Mindy
 <br><br>
 ![alt text][No1B]
 
-[No1B]: 
+[No1B]: Results/No1B.png
 
 **Part 2A**
 ```
@@ -93,7 +93,7 @@ plt.bar(board['Gender'], board['Average'])
 <br><br>
 ![alt text][No2A]
 
-[No2A]: 
+[No2A]: Results/No2A.png
 
 **Part 2A**
 ```
@@ -111,7 +111,7 @@ plt.bar(board['Track'], board['Average'])
 <br><br>
 ![alt text][No2B]
 
-[No2B]: 
+[No2B]: Results/No2B.png
 
 **Part 2C**
 ```
@@ -129,7 +129,7 @@ plt.bar(board['Hometown'], board['Average'])
 <br><br>
 ![alt text][No2C]
 
-[No2C]: 
+[No2C]: Results/No2C.png
 
 
 
