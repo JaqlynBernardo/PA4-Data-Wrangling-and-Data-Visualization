@@ -10,7 +10,7 @@ Write a Python script/code in the Jupyter Notebook to do the given problems.
 ### Importing PANDAS Library
 ```
 import pandas as pd
-
+import matplotlib.pyplot as plt
 ```
 Before writing the code, the Pandas Library and Matplotlib were imported. Pandas grants access to the dataframe object and its associated operations and functions, while Matplotlib grants access to types of data visualizations.
 
