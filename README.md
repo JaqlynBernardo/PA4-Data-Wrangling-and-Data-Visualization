@@ -130,6 +130,7 @@ plt.bar(hometown['Hometown'], hometown['Average'])
 <br>
 First, I grouped the data by using the .groupby syntax. This groups the data by the 'Hometown' column and gets the average of Luzon, Visayas, and Mindanao, using the .mean syntax. The 'as_index' is set to false so that 'Hometown' remains a column. The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Track')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Track' and 'Average Scores', respectively. I used the .bar syntax to generate a bar graph. I specified the 'hometown' from the grouped dataframe, 'hometown', as my x-axis, and 'Average' from the same dataframe as my y-axis. 
 <br>
+
 **Results**
 <br><br>
 ![alt text][No2C]
