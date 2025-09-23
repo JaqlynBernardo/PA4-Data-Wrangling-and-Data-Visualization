@@ -86,7 +86,7 @@ plt.ylabel("Average Scores")
 plt.bar(board['Gender'], board['Average'])
 ```
 <br>
-The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Gender')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Gender' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Gender' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
+First, I grouped the data by using the .groupby syntax. This groups the data by the 'Gender' column and gets the average of both Male and Female, using the .mean syntax. The 'as_index' is set to false so that 'Gender' remains a column. The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Gender')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Gender' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Gender' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
 <br><br>
 
 **Results**
@@ -95,18 +95,18 @@ The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches).
 
 [No2A]: Results/No2A.png
 
-**Part 2A**
+**Part 2B**
 ```
-gender = board.groupby('Gender', as_index=False)['Average'].mean()
+track = board.groupby('Track', as_index=False)['Average'].mean()
 
 plt.figure(figsize=(5,5))
-plt.title("Average Scores by Gender")
-plt.xlabel("Gender")
-plt.ylabel("Average Scores")
-plt.bar(gender['Gender'], gender['Average'])
+plt.title('Average Scores by Track')
+plt.xlabel('Track')
+plt.ylabel('Average Scores')
+plt.bar(track['Track'], track['Average'])
 ```
 <br>
-First, I grouped the data by using the groupby syntax. The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Track')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Track' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Track' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
+First, I grouped the data by using the .groupby syntax. This groups the data by the 'Track' column and gets the average of Communication, Instrumentation, and Microelectronics, using the .mean syntax. The 'as_index' is set to false so that 'Track' remains a column. The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Track')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Track' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Track' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
 <br><br>
 
 **Results**
@@ -117,16 +117,17 @@ First, I grouped the data by using the groupby syntax. The "plt.figure((5,5))" c
 
 **Part 2C**
 ```
+hometown = board.groupby('Hometown', as_index=False)['Average'].mean()
+
 plt.figure(figsize=(5,5))
-plt.title("Average Scores by Hometown")
-plt.xlabel("Hometown")
-plt.ylabel("Average Scores")
-plt.bar(board['Hometown'], board['Average'])
+plt.title('Average Scores by Hometown')
+plt.xlabel('Hometown')
+plt.ylabel('Average Scores')
+plt.bar(hometown['Hometown'], hometown['Average'])
 ```
 <br>
-The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Hometown')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Hometown' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Hometown' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
-<br><br>
-
+First, I grouped the data by using the .groupby syntax. This groups the data by the 'Hometown' column and gets the average of Luzon, Visayas, and Mindanao, using the .mean syntax. The 'as_index' is set to false so that 'Hometown' remains a column. The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Track')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Track' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Track' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
+<br>
 **Results**
 <br><br>
 ![alt text][No2C]
