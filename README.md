@@ -97,14 +97,16 @@ The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches).
 
 **Part 2A**
 ```
+gender = board.groupby('Gender', as_index=False)['Average'].mean()
+
 plt.figure(figsize=(5,5))
-plt.title("Average Scores by Track")
-plt.xlabel("Track")
+plt.title("Average Scores by Gender")
+plt.xlabel("Gender")
 plt.ylabel("Average Scores")
-plt.bar(board['Track'], board['Average'])
+plt.bar(gender['Gender'], gender['Average'])
 ```
 <br>
-The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Track')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Track' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Track' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
+First, I grouped the data by using the groupby syntax. The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Track')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Track' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Track' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
 <br><br>
 
 **Results**
