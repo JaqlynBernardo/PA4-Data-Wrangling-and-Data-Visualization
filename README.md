@@ -7,7 +7,10 @@ This program shows different demonstrations of data wrangling and data visualiza
 ## Instructions
 Write a Python script/code in the Jupyter Notebook to do the given problems.
 
-### Importing PANDAS Library
+### ECE Board Exam Problem
+Using data wrangling and data visualization technique with storytelling, analyze the data and present different (i) data frames; and (ii) visuals using the dataset given.
+
+### Importing PANDAS and Matplotlib
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -30,8 +33,10 @@ First, the variable 'board' was declared. Inside the variable is the pd.read_exc
 
 [RefDF]: Results/RefDF.png
 
-### ECE Board Exam Problem
-Using data wrangling and data visualization technique with storytelling, analyze the data and present different (i) data frames; and (ii) visuals using the dataset given.
+### Part 1
+Create the following data frames based on the format provided:
+* (A) Instru = [“Name”, “GEAS”, “Electronics >70”]; where track is constant as Instrumentation and hometown Luzon
+* (B) Mindy = [ “Name”, “Track”, “Electronics”, “Average >=55”]; where hometown is constant as Mindanao and gender Female
 
 **Part 1A**
 ```
@@ -76,6 +81,9 @@ Next, under the variable 'Mindy', I used the same type of code as the previous p
 ![alt text][No1B]
 
 [No1B]: Results/No1B.png
+
+### Part 2
+Create a visualization that shows how the different features contributes to average grade. Does chosen track in college, gender, or hometown contributes to a higher average score?
 
 **Part 2A**
 ```
