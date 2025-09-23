@@ -12,7 +12,7 @@ Write a Python script/code in the Jupyter Notebook to do the given problems.
 import pandas as pd
 import matplotlib.pyplot as plt
 ```
-Before writing the code, the Pandas Library and Matplotlib were imported. Pandas grants access to the dataframe object and its associated operations and functions, while Matplotlib grants access to types of data visualizations.
+Before writing the code, the Pandas Library and Matplotlib were imported. Pandas grants access to the dataframe object and its associated operations and functions, while Matplotlib grants access to different types of data visualizations.
 
 ### Reference Dataframe
 ECE Board Exam 2 dataset
@@ -42,7 +42,7 @@ Instru = board.loc[(board['Electronics']>70) # Score for Electronics is more tha
 Instru
 ```
 <br>
-
+Inside the variable 'Instru', I took the previously established dataframe, 'board', and used .loc syntax to specify the rows and the columns I want to display. For the rows, as given by the instruction: (1) under 'Electronics', the value must be more than 70, (2) under 'Track', the student must have taken 'Instrumentation' (denoted by '==' in the code), and (3) under 'Hometown', the student must be from 'Luzon' (denoted by '==' in the code). For the columns, given by the instruction, the columns shown are: 'Name', 'GEAS', and 'Electronics.'
 <br><br>
 
 **Results**
@@ -57,18 +57,18 @@ Instru
 board['Average'] = board[['Math','Electronics','GEAS','Communication']].mean(axis=1)
 ```
 <br>
-
+First, I looked for the average of the scores per student. I did this by adding a new column to the 'board' dataframe. The "board['Average']" code adds a new column named 'Average' to the dataframe. Then, I took the specific columns, 'Math', 'Electronics', 'GEAS', and 'Communication' in the dataframe and used .mean() syntax to get the mean. The mean syntax is specified as '(axis=1)' so that it takes the values across the columns (horizontally). 
 <br><br>
 
 ```
-Mindy = board.loc[(board['Average']>=55) # Average is more thanor equal to 55
+Mindy = board.loc[(board['Average']>=55) # Average is more than or equal to 55
                     & (board['Gender'] == 'Female') # Constant Female Gender
                     & (board['Hometown'] == 'Mindanao') # Constant Mindanao Hometown
                     ,['Name','Track','Electronics','Average']] # Columns shown
 Mindy
 ```
 <br>
-
+Next, under the variable 'Mindy', I used the same type of code as the previous part (Part 1A). I used the .loc syntax to specify the rows and the columns I want to display. For the rows, as given by the instruction: (1) under 'Average', the value must be more than  or equal to 55, (2) under 'Gender', the student must identify as 'Female' (denoted by '==' in the code), and (3) under 'Hometown', the student must be from 'Mindanao' (denoted by '==' in the code). For the columns given by the instruction, the columns shown are: 'Name', 'Track', 'Electronics', and 'Average.' 
 <br><br>
 
 **Results**
@@ -86,7 +86,7 @@ plt.ylabel("Average Scores")
 plt.bar(board['Gender'], board['Average'])
 ```
 <br>
-
+The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Gender')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Gender' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Gender' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
 <br><br>
 
 **Results**
@@ -104,7 +104,7 @@ plt.ylabel("Average Scores")
 plt.bar(board['Track'], board['Average'])
 ```
 <br>
-
+The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Track')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Track' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Track' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
 <br><br>
 
 **Results**
@@ -122,7 +122,7 @@ plt.ylabel("Average Scores")
 plt.bar(board['Hometown'], board['Average'])
 ```
 <br>
-
+The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Hometown')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Hometown' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Hometown' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
 <br><br>
 
 **Results**
