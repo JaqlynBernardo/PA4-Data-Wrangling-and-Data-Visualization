@@ -79,11 +79,13 @@ Next, under the variable 'Mindy', I used the same type of code as the previous p
 
 **Part 2A**
 ```
+gender = board.groupby('Gender', as_index=False)['Average'].mean()
+
 plt.figure(figsize=(5,5))
 plt.title("Average Scores by Gender")
 plt.xlabel("Gender")
 plt.ylabel("Average Scores")
-plt.bar(board['Gender'], board['Average'])
+plt.bar(gender['Gender'], gender['Average'])
 ```
 <br>
 First, I grouped the data by using the .groupby syntax. This groups the data by the 'Gender' column and gets the average of both Male and Female, using the .mean syntax. The 'as_index' is set to false so that 'Gender' remains a column. The "plt.figure((5,5))" creates a new figure that is 5 by 5 in size (in inches). The "plt.title('Average Scores by Gender')" gives the figure the stated title. I used the .xlabel and the .ylabel syntaxes to name the axes, 'Gender' and 'Average Scores', respectively. Lastly, I used the .bar syntax to generate a bar graph. I specified the 'Gender' column from the board dataframe as my x-axis, and 'Average' from the same dataframe as my y-axis. 
